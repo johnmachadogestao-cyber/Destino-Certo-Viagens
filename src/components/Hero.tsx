@@ -50,7 +50,7 @@ export default function Hero() {
           QUERO ENTRAR NO GRUPO AGORA
         </motion.button>
  
-        <div className="mt-5 md:mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 justify-center w-full max-w-3xl">
+        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center w-full max-w-4xl">
             {[
               { icon: Plane, label: "Ofertas exclusivas" },
               { icon: Globe, label: "Destinos incríveis" },
@@ -62,10 +62,10 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 + (i * 0.1) }}
-                className="flex flex-col items-center gap-1 md:gap-2"
+                className="flex flex-col items-center gap-2 md:gap-3"
               >
-                <item.icon className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />
-                <span className="text-[11px] sm:text-xs md:text-sm">{item.label}</span>
+                <item.icon className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-yellow-400" />
+                <span className="text-xs sm:text-sm md:text-base font-medium">{item.label}</span>
               </motion.div>
             ))}
         </div>
