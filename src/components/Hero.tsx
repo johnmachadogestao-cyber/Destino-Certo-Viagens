@@ -50,7 +50,7 @@ export default function Hero() {
           QUERO ENTRAR NO GRUPO AGORA
         </motion.button>
  
-        <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center w-full max-w-4xl">
+        <div className="mt-20 sm:mt-28 md:mt-36 lg:mt-44 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center w-full max-w-4xl pb-4">
             {[
               { icon: Plane, label: "Ofertas exclusivas" },
               { icon: Globe, label: "Destinos incríveis" },
