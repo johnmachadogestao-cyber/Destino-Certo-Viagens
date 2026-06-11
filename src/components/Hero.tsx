@@ -14,19 +14,19 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen md:h-screen w-full flex items-center justify-center overflow-hidden py-12 md:py-0">
+    <section className="relative min-h-screen md:h-screen w-full flex items-center justify-center overflow-hidden py-8 md:py-0">
       <div className="absolute inset-0 bg-gray-900/60 z-10" />
       <img
         src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop"
         alt="Travel background"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="relative z-20 container mx-auto px-6 text-center text-white flex flex-col items-center justify-start md:justify-start h-full pt-6 sm:pt-10 md:pt-14 lg:pt-16 pb-8">
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] md:h-full pt-12 pb-8">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold mb-4 md:mb-6 leading-tight max-w-5xl"
+          className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold mb-4 md:mb-6 leading-tight max-w-5xl"
         >
           <span className="block sm:inline whitespace-nowrap">Seu próximo embarque</span> pode estar a uma mensagem de distância.
         </motion.h1>
@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-xl md:max-w-3xl mx-auto mb-16 sm:mb-24 md:mb-28 lg:mb-32 text-gray-200"
+          className="text-sm sm:text-lg md:text-xl lg:text-2xl max-w-sm sm:max-w-xl md:max-w-3xl mx-auto mb-14 sm:mb-20 md:mb-24 lg:mb-28 text-gray-200 leading-relaxed"
         >
           Entre para a comunidade que descobre promoções, cruzeiros e oportunidades de viagem antes da maioria.
         </motion.p>
@@ -44,13 +44,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           whileHover={{ scale: 1.05 }}
-          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full flex items-center gap-2 mx-auto text-base md:text-lg transition-colors shadow-lg shadow-[#25D366]/20"
+          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-extrabold py-4 px-8 sm:py-5 sm:px-10 md:py-6 md:px-14 rounded-full flex items-center justify-center gap-3 mx-auto text-lg sm:text-xl md:text-2xl transition-all shadow-xl shadow-[#25D366]/30 border border-green-400/40 uppercase tracking-wide"
         >
-          <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
+          <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 flex-shrink-0" />
           QUERO ENTRAR NO GRUPO AGORA
         </motion.button>
  
-        <div className="mt-20 sm:mt-28 md:mt-36 lg:mt-44 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center w-full max-w-4xl pb-4">
+        <div className="mt-16 sm:mt-24 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 justify-center w-full max-w-4xl pb-4">
             {[
               { icon: Plane, label: "Ofertas exclusivas" },
               { icon: Globe, label: "Destinos incríveis" },

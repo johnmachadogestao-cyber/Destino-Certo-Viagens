@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Plane, Star, Umbrella, Ship, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const offers = [
   { 
@@ -70,15 +70,15 @@ export default function Offers() {
 
   return (
     <section className="py-10 bg-gray-50 overflow-hidden">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-8">
-          <span className="whitespace-nowrap">Algumas das viagens</span> que já divulgamos no grupo
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-8 leading-tight">
+          <span className="block sm:inline whitespace-nowrap">Algumas das viagens</span> que já divulgamos no grupo
         </h2>
         
         {/* Carousel Wrapper */}
-        <div className="relative max-w-4xl mx-auto px-4">
+        <div className="relative max-w-4xl mx-auto px-1 sm:px-4">
           <div 
-            className="relative overflow-hidden rounded-3xl shadow-xl border border-gray-100 bg-white h-[650px] sm:h-[600px] md:h-[360px] lg:h-[380px] cursor-grab active:cursor-grabbing"
+            className="relative overflow-hidden rounded-3xl shadow-xl border border-gray-100 bg-white h-[580px] sm:h-[600px] md:h-[360px] lg:h-[380px] cursor-grab active:cursor-grabbing"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
           >
@@ -96,7 +96,7 @@ export default function Offers() {
               >
                 <div className="w-full h-full bg-white rounded-2xl flex flex-col md:flex-row overflow-hidden">
                   {/* Image Container with perfect 9:16 alignment */}
-                  <div className="relative aspect-[9/16] h-[370px] sm:h-[390px] md:h-full mx-auto md:mx-0 flex-shrink-0 overflow-hidden bg-gray-950 flex items-center justify-center">
+                  <div className="relative aspect-[9/16] h-[320px] sm:h-[380px] md:h-full mx-auto md:mx-0 flex-shrink-0 overflow-hidden bg-gray-950 flex items-center justify-center">
                     {/* Blurred background backup to fit 9:16 nicely */}
                     <img 
                       src={offer.image} 
@@ -114,28 +114,28 @@ export default function Offers() {
                   </div>
                   
                   {/* Content Container */}
-                  <div className="w-full md:flex-1 p-5 sm:p-6 md:p-8 flex flex-col justify-start md:justify-center text-left pb-16 md:pb-8">
-                    <span className="text-blue-600 font-semibold text-xs tracking-wider uppercase mb-1 sm:mb-1.5">Oportunidades</span>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-2 sm:mb-3 leading-tight sm:leading-snug">{offer.title}</h3>
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4 sm:mb-6">{offer.desc}</p>
+                  <div className="w-full md:flex-1 p-4 s:p-6 md:p-8 flex flex-col justify-start md:justify-center text-left pb-16 md:pb-8">
+                    <span className="text-blue-600 font-semibold text-xs tracking-wider uppercase mb-1">Oportunidades</span>
+                    <h3 className="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-1.5 sm:mb-3 leading-tight sm:leading-snug">{offer.title}</h3>
+                    <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed mb-3 sm:mb-6">{offer.desc}</p>
                     
-                    <div className="flex items-center gap-2 text-sm text-green-600 font-semibold">
-                      <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                    <div className="flex items-center gap-2 text-xs sm:text-sm text-green-600 font-semibold">
+                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                       Disponível com exclusividade no grupo
                     </div>
                   </div>
                 </div>
               </motion.div>
             ))}
-
+            
             {/* Pagination Indicators on the bottom */}
-            <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-2">
+            <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-1.5">
               {offers.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
-                  className={`h-2 transition-all rounded-full ${
-                    idx === activeIndex ? 'w-8 bg-blue-600' : 'w-2 bg-gray-300'
+                  className={`h-1.5 transition-all rounded-full ${
+                    idx === activeIndex ? 'w-6 bg-blue-600' : 'w-1.5 bg-gray-300'
                   }`}
                   aria-label={`Ir para oferta ${idx + 1}`}
                 />
@@ -146,17 +146,17 @@ export default function Offers() {
           {/* Navigation Controls */}
           <button
             onClick={prevSlide}
-            className="absolute -left-2 md:-left-16 top-1/2 -translate-y-1/2 z-30 bg-white hover:bg-blue-600 text-gray-800 hover:text-white p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
+            className="absolute -left-1 sm:-left-3 md:-left-16 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-blue-600 text-gray-800 hover:text-white p-2 sm:p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
             aria-label="Oferta Anterior"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute -right-2 md:-right-16 top-1/2 -translate-y-1/2 z-30 bg-white hover:bg-blue-600 text-gray-800 hover:text-white p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
+            className="absolute -right-1 sm:-right-3 md:-right-16 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-blue-600 text-gray-800 hover:text-white p-2 sm:p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
             aria-label="Próxima Oferta"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
       </div>

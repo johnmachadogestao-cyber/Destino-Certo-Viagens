@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const feedbackImages = [
   "https://i.postimg.cc/13G6HhyJ/Whats-App-Image-2026-06-09-at-01-08-20.jpg",
@@ -52,18 +52,18 @@ export default function Testimonials() {
 
   return (
     <section id="feedbacks" className="py-10 bg-white overflow-hidden">
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-3 leading-tight">
             Experiências reais de quem confiou na Destino Certo
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-sans leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-sans leading-relaxed">
             Por trás de cada mensagem existe uma viagem realizada, uma experiência vivida e uma história para recordar.
           </p>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-xl mx-auto px-4">
+        <div className="relative max-w-xl mx-auto px-1 sm:px-4">
           <div 
             className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-gray-100 bg-gray-50 aspect-[3/4] md:aspect-[4/5] cursor-grab active:cursor-grabbing"
             onTouchStart={handleTouchStart}
@@ -91,13 +91,13 @@ export default function Testimonials() {
             ))}
 
             {/* Overlay indicators on bottom */}
-            <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-2">
+            <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-1.5">
               {feedbackImages.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
-                  className={`h-2 transition-all rounded-full ${
-                    idx === activeIndex ? 'w-8 bg-blue-600' : 'w-2 bg-gray-300'
+                  className={`h-1.5 transition-all rounded-full ${
+                    idx === activeIndex ? 'w-6 bg-blue-600' : 'w-1.5 bg-gray-300'
                   }`}
                   aria-label={`Ir para depoimento ${idx + 1}`}
                 />
@@ -108,17 +108,17 @@ export default function Testimonials() {
           {/* Navigation Controls */}
           <button
             onClick={prevSlide}
-            className="absolute -left-4 md:-left-16 top-1/2 -translate-y-1/2 z-30 bg-white hover:bg-blue-600 text-gray-800 hover:text-white p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
+            className="absolute -left-1 sm:-left-3 md:-left-16 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-blue-600 text-gray-800 hover:text-white p-2 sm:p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
             aria-label="Depoimento Anterior"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 z-30 bg-white hover:bg-blue-600 text-gray-800 hover:text-white p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
+            className="absolute -right-1 sm:-right-3 md:-right-16 top-1/2 -translate-y-1/2 z-30 bg-white/95 hover:bg-blue-600 text-gray-800 hover:text-white p-2 sm:p-3 rounded-full shadow-lg border border-gray-100 transition-all hover:scale-110 active:scale-95"
             aria-label="Próximo Depoimento"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>
         </div>
 

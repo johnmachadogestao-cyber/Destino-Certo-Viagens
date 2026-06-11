@@ -13,19 +13,19 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 export default function FinalCTA() {
   return (
-    <section className="py-10 bg-blue-900 text-white text-center">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-serif font-bold mb-4">
-          <span className="whitespace-nowrap">Seu próximo destino</span> pode aparecer no grupo hoje.
+    <section className="py-12 md:py-16 bg-blue-900 text-white text-center">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight">
+          <span className="block sm:inline whitespace-nowrap">Seu próximo destino</span> pode aparecer no grupo hoje.
         </h2>
-        <p className="text-lg text-gray-300 mb-6 max-w-lg mx-auto">
+        <p className="text-sm sm:text-base md:text-lg text-gray-200 mb-8 max-w-lg mx-auto leading-relaxed">
           Entre agora e receba em primeira mão promoções, cruzeiros, pacotes e oportunidades de viagem compartilhadas diretamente no WhatsApp.
         </p>
         <motion.button 
           whileHover={{ scale: 1.05 }}
-          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-8 rounded-full flex items-center gap-2 mx-auto text-lg transition-colors shadow-lg shadow-[#25D366]/20"
+          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3.5 px-6 md:py-4 md:px-8 rounded-full flex items-center gap-2 mx-auto text-base md:text-lg transition-colors shadow-lg shadow-[#25D366]/20 border border-green-400/30"
         >
-          <WhatsAppIcon className="w-6 h-6 flex-shrink-0" />
+          <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
           QUERO ENTRAR NO GRUPO AGORA
         </motion.button>
       </div>
