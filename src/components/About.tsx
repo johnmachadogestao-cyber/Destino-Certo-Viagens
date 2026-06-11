@@ -8,7 +8,7 @@ export default function About() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          src="https://i.postimg.cc/gJdzdQRn/IMG-2198.avif"
+          src="https://i0.wp.com/i.postimg.cc/gJdzdQRn/IMG-2198.avif"
           referrerPolicy="no-referrer"
           alt="Equipe Destino Certo"
           className="rounded-3xl shadow-2xl border-4 border-white max-w-full h-auto mx-auto md:mx-0 object-cover"
