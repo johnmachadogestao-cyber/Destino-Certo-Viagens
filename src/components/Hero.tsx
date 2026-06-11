@@ -26,7 +26,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold mb-4 md:mb-6 leading-tight max-w-5xl"
+          className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-extrabold mb-4 md:mb-6 leading-tight max-w-5xl"
         >
           <span className="block sm:inline whitespace-nowrap">Seu próximo embarque</span> pode estar a uma mensagem de distância.
         </motion.h1>
