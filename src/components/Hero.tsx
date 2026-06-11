@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-sm sm:text-lg md:text-xl lg:text-2xl max-w-sm sm:max-w-xl md:max-w-3xl mx-auto mb-14 sm:mb-20 md:mb-24 lg:mb-28 text-gray-200 leading-relaxed"
+          className="text-sm sm:text-lg md:text-xl lg:text-2xl max-w-sm sm:max-w-xl md:max-w-3xl mx-auto mb-20 sm:mb-28 md:mb-36 lg:mb-40 text-gray-200 leading-relaxed"
         >
           Entre para a comunidade que descobre promoções, cruzeiros e oportunidades de viagem antes da maioria.
         </motion.p>
@@ -50,7 +50,7 @@ export default function Hero() {
           QUERO ENTRAR NO GRUPO AGORA
         </motion.button>
  
-        <div className="mt-16 sm:mt-24 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 justify-center w-full max-w-4xl pb-4">
+        <div className="mt-8 sm:mt-12 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 justify-center w-full max-w-4xl pb-4">
             {[
               { icon: Plane, label: "Ofertas exclusivas" },
               { icon: Globe, label: "Destinos incríveis" },
