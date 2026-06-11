@@ -26,7 +26,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif font-extrabold mb-4 md:mb-6 leading-tight max-w-5xl"
+          className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[8.5rem] font-serif font-extrabold tracking-tight mb-6 md:mb-8 leading-none max-w-6xl"
         >
           <span className="block sm:inline whitespace-nowrap">Seu próximo embarque</span> pode estar a uma mensagem de distância.
         </motion.h1>
@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-sm sm:text-lg md:text-xl lg:text-2xl max-w-sm sm:max-w-xl md:max-w-3xl mx-auto mb-20 sm:mb-28 md:mb-36 lg:mb-40 text-gray-200 leading-relaxed"
+          className="text-base sm:text-xl md:text-2xl lg:text-3xl max-w-md sm:max-w-2xl md:max-w-4xl mx-auto mb-20 sm:mb-28 md:mb-36 lg:mb-40 text-gray-200 leading-relaxed"
         >
           Entre para a comunidade que descobre promoções, cruzeiros e oportunidades de viagem antes da maioria.
         </motion.p>
