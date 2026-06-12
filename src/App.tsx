@@ -6,6 +6,7 @@
 import Hero from './components/Hero';
 import About from './components/About';
 import Offers from './components/Offers';
+import RecentTrip from './components/RecentTrip';
 import Testimonials from './components/Testimonials';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ export default function App() {
       <Hero />
       <About />
       <Offers />
+      <RecentTrip />
       <Testimonials />
       <FinalCTA />
       <Footer />
