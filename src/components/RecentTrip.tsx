@@ -104,7 +104,7 @@ export default function RecentTrip() {
         </h2>
         
         <p className="text-sm sm:text-base text-gray-500 text-center max-w-md sm:max-w-xl mx-auto mb-10 leading-relaxed font-sans">
-          Acompanhe em tempo real os roteiros e as maiores oportunidades desfrutadas por nossos clientes exclusivos.
+          Cada viagem conta uma história. Conheça uma das experiências que marcaram nossos clientes.
         </p>
 
         {/* 3D Carousel Stage */}
