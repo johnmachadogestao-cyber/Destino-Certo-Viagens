@@ -100,11 +100,11 @@ export default function RecentTrip() {
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Same styling and layout as "Algumas das viagens" */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-2 leading-tight">
-          <span className="block sm:inline whitespace-nowrap">Nossa mais recente</span> viagem
+          Oportunidades de viagens do grupo exclusivo de promoções
         </h2>
         
-        <p className="text-sm sm:text-base text-gray-500 text-center max-w-md sm:max-w-xl mx-auto mb-10 leading-relaxed font-sans">
-          Cada viagem conta uma história. Conheça uma das experiências que marcaram nossos clientes.
+        <p className="text-sm sm:text-base text-gray-500 text-center max-w-md sm:max-w-xl mx-auto mb-10 leading-relaxed font-sans font-medium">
+          Expedição Jalapão
         </p>
 
         {/* 3D Carousel Stage */}
