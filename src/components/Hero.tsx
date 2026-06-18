@@ -22,30 +22,26 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Header with Logo and Name */}
-      <header className="absolute top-0 left-0 right-0 z-30 w-full py-5 sm:py-6 bg-gradient-to-b from-black/50 to-transparent">
-        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-center">
-          <motion.div 
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center gap-3.5"
-          >
-            <div className="bg-white/95 p-1.5 rounded-xl shadow-md border border-white/20 transition-transform hover:scale-105 duration-300">
-              <img 
-                src="https://i.postimg.cc/tCG5ZPRp/Captura-de-tela-2026-06-18-013401.png" 
-                alt="Destino Certo Logo" 
-                className="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-lg"
-              />
-            </div>
-            <span className="text-white text-xl sm:text-2xl font-serif font-bold tracking-wide drop-shadow-md">
-              Destino Certo
-            </span>
-          </motion.div>
-        </div>
-      </header>
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-screen md:h-full pt-24 xs:pt-28 sm:pt-24 md:pt-16 pb-12 sm:pb-16">
+        {/* Brand Logo & Name */}
+        <motion.div 
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center gap-3 md:gap-3.5 mb-6 sm:mb-8 md:mb-10"
+        >
+          <div className="bg-white/95 p-1.5 rounded-xl shadow-md border border-white/20 transition-transform hover:scale-105 duration-300">
+            <img 
+              src="https://i.postimg.cc/tCG5ZPRp/Captura-de-tela-2026-06-18-013401.png" 
+              alt="Destino Certo Logo" 
+              className="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-lg"
+            />
+          </div>
+          <span className="text-white text-xl sm:text-2xl font-serif font-bold tracking-wide drop-shadow-md">
+            Destino Certo
+          </span>
+        </motion.div>
 
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] md:h-full pt-20 sm:pt-24 md:pt-16 pb-8">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
