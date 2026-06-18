@@ -22,13 +22,13 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-screen md:h-full pt-14 xs:pt-16 sm:pt-18 md:pt-12 pb-12 sm:pb-16">
-        {/* Brand Logo & Name */}
+      {/* Brand Logo & Name (Positioned higher at the top) */}
+      <div className="absolute top-6 xs:top-8 sm:top-10 left-0 right-0 z-30 flex justify-center">
         <motion.div 
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center gap-3 md:gap-3.5 mb-14 xs:mb-16 sm:mb-20 md:mb-24"
+          className="flex items-center gap-3 md:gap-3.5"
         >
           <div className="bg-white/95 p-1.5 rounded-xl shadow-md border border-white/20 transition-transform hover:scale-105 duration-300">
             <img 
@@ -41,7 +41,9 @@ export default function Hero() {
             Destino Certo
           </span>
         </motion.div>
+      </div>
 
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-screen md:h-full pt-32 xs:pt-36 sm:pt-32 md:pt-20 pb-12 sm:pb-16">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
