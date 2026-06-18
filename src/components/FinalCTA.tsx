@@ -1,4 +1,7 @@
 import { motion } from 'motion/react';
+import React, { useState } from 'react';
+import { trackEvent, generateEventId } from '../lib/metaPixel';
+import { WHATSAPP_GROUP_LINK_PLACEHOLDER } from '../config';
 
 const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg 
@@ -12,6 +15,23 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 );
 
 export default function FinalCTA() {
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
+  const handleJoinGroup = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isRedirecting) return;
+    setIsRedirecting(true);
+
+    const eventId = generateEventId('Lead');
+    try {
+      await trackEvent({ eventName: 'Lead', eventId });
+    } catch (err) {
+      console.error("[Tracking Lead Final Error] Falha no rastreamento:", err);
+    } finally {
+      window.location.href = WHATSAPP_GROUP_LINK_PLACEHOLDER;
+    }
+  };
+
   return (
     <section className="py-12 md:py-16 bg-blue-900 text-white text-center">
       <div className="container mx-auto px-4 sm:px-6">
@@ -22,11 +42,13 @@ export default function FinalCTA() {
           Entre agora e receba em primeira mão promoções, cruzeiros, pacotes e oportunidades de viagem compartilhadas diretamente no WhatsApp.
         </p>
         <motion.button 
-          whileHover={{ scale: 1.05 }}
-          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3.5 px-6 md:py-4 md:px-8 rounded-full flex items-center gap-2 mx-auto text-base md:text-lg transition-colors shadow-lg shadow-[#25D366]/20 border border-green-400/30"
+          whileHover={{ scale: isRedirecting ? 1 : 1.05 }}
+          onClick={handleJoinGroup}
+          disabled={isRedirecting}
+          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3.5 px-6 md:py-4 md:px-8 rounded-full flex items-center gap-2 mx-auto text-base md:text-lg transition-colors shadow-lg shadow-[#25D366]/20 border border-green-400/30 cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
         >
           <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
-          QUERO ENTRAR NO GRUPO AGORA
+          {isRedirecting ? "Redirecionando..." : "QUERO ENTRAR NO GRUPO AGORA"}
         </motion.button>
       </div>
     </section>

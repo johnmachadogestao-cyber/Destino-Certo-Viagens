@@ -1,5 +1,8 @@
 import { motion } from 'motion/react';
 import { Plane, Globe, Zap, MessageSquare } from 'lucide-react';
+import React, { useState } from 'react';
+import { trackEvent, generateEventId } from '../lib/metaPixel';
+import { WHATSAPP_GROUP_LINK_PLACEHOLDER } from '../config';
 
 const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg 
@@ -13,6 +16,25 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 );
 
 export default function Hero() {
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
+  const handleJoinGroup = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isRedirecting) return;
+    setIsRedirecting(true);
+
+    const eventId = generateEventId('Lead');
+    try {
+      // Dispara o evento de Lead e aguarda as conexões/fetch do proxy
+      await trackEvent({ eventName: 'Lead', eventId });
+    } catch (err) {
+      console.error("[Tracking Lead Error] Falha no rastreamento:", err);
+    } finally {
+      // Redireciona o usuário para o grupo depois do rastreamento iniciar
+      window.location.href = WHATSAPP_GROUP_LINK_PLACEHOLDER;
+    }
+  };
+
   return (
     <section className="relative min-h-screen md:min-h-screen w-full flex items-center justify-center overflow-hidden py-8 md:py-16">
       <div className="absolute inset-0 bg-gray-900/60 z-10" />
@@ -70,11 +92,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-extrabold py-4 px-8 sm:py-5 sm:px-10 md:py-6 md:px-14 rounded-full flex items-center justify-center gap-3 mx-auto text-lg sm:text-xl md:text-2xl transition-all shadow-xl shadow-[#25D366]/30 border border-green-400/40 uppercase tracking-wide"
+          whileHover={{ scale: isRedirecting ? 1 : 1.05 }}
+          onClick={handleJoinGroup}
+          disabled={isRedirecting}
+          className="bg-[#25D366] hover:bg-[#128C7E] text-white font-extrabold py-4 px-8 sm:py-5 sm:px-10 md:py-6 md:px-14 rounded-full flex items-center justify-center gap-3 mx-auto text-lg sm:text-xl md:text-2xl transition-all shadow-xl shadow-[#25D366]/30 border border-green-400/40 uppercase tracking-wide cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed"
         >
           <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 flex-shrink-0" />
-          QUERO ENTRAR NO GRUPO AGORA
+          {isRedirecting ? "Redirecionando..." : "QUERO ENTRAR NO GRUPO AGORA"}
         </motion.button>
  
         <div className="mt-8 sm:mt-12 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 justify-center w-full max-w-4xl pb-4">
