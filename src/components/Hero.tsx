@@ -21,12 +21,36 @@ export default function Hero() {
         alt="Travel background"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] md:h-full pt-12 pb-8">
+
+      {/* Header with Logo and Name */}
+      <header className="absolute top-0 left-0 right-0 z-30 w-full py-5 sm:py-6 bg-gradient-to-b from-black/50 to-transparent">
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-center">
+          <motion.div 
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center gap-3.5"
+          >
+            <div className="bg-white/95 p-1.5 rounded-xl shadow-md border border-white/20 transition-transform hover:scale-105 duration-300">
+              <img 
+                src="https://i.postimg.cc/tCG5ZPRp/Captura-de-tela-2026-06-18-013401.png" 
+                alt="Destino Certo Logo" 
+                className="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-lg"
+              />
+            </div>
+            <span className="text-white text-xl sm:text-2xl font-serif font-bold tracking-wide drop-shadow-md">
+              Destino Certo
+            </span>
+          </motion.div>
+        </div>
+      </header>
+
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] md:h-full pt-20 sm:pt-24 md:pt-16 pb-8">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[8.5rem] font-serif font-extrabold tracking-tight mb-6 md:mb-8 leading-none max-w-6xl"
+          className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[8.5rem] font-serif font-extrabold tracking-tight mb-4 md:mb-6 leading-none max-w-6xl"
         >
           <span className="block sm:inline whitespace-nowrap">Seu próximo embarque</span> pode estar a uma mensagem de distância.
         </motion.h1>
@@ -34,7 +58,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-base sm:text-xl md:text-2xl lg:text-3xl max-w-md sm:max-w-2xl md:max-w-4xl mx-auto mb-20 sm:mb-28 md:mb-36 lg:mb-40 text-gray-200 leading-relaxed"
+          className="text-base sm:text-xl md:text-2xl lg:text-3xl max-w-md sm:max-w-2xl md:max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 text-gray-200 leading-relaxed"
         >
           Entre para a comunidade que descobre promoções, cruzeiros e oportunidades de viagem antes da maioria.
         </motion.p>
