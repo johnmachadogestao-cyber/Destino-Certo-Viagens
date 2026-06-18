@@ -37,9 +37,14 @@ export default function Hero() {
               className="h-16 w-auto sm:h-20 md:h-24 object-contain rounded-xl"
             />
           </div>
-          <span className="text-white text-2xl sm:text-3xl md:text-4xl font-serif font-bold tracking-wide drop-shadow-lg">
-            Destino Certo
-          </span>
+          <div className="flex flex-col items-start text-left leading-tight sm:leading-none">
+            <span className="text-white text-2xl sm:text-3xl md:text-4xl font-serif font-bold tracking-wide drop-shadow-lg">
+              Destino
+            </span>
+            <span className="text-white text-2xl sm:text-3xl md:text-4xl font-serif font-bold tracking-wide drop-shadow-lg">
+              Certo viagens
+            </span>
+          </div>
         </motion.div>
       </div>
 
