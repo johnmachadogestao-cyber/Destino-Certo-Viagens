@@ -14,7 +14,7 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen md:h-screen w-full flex items-center justify-center overflow-hidden py-8 md:py-0">
+    <section className="relative min-h-screen md:min-h-screen w-full flex items-center justify-center overflow-hidden py-8 md:py-16">
       <div className="absolute inset-0 bg-gray-900/60 z-10" />
       <img
         src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop"
@@ -48,12 +48,12 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-screen md:h-full pt-20 xs:pt-24 sm:pt-20 md:pt-14 pb-12 sm:pb-16">
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-screen md:min-h-screen pt-20 xs:pt-24 sm:pt-20 md:pt-48 lg:pt-52 pb-12 sm:pb-16">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[8.5rem] font-serif font-extrabold tracking-tight mb-4 md:mb-6 leading-none max-w-6xl"
+          className="text-4xl xs:text-5xl sm:text-7xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-extrabold tracking-tight mb-4 md:mb-6 leading-none max-w-6xl"
         >
           <span className="block sm:inline whitespace-nowrap">Seu próximo embarque</span> pode estar a uma mensagem de distância.
         </motion.h1>
