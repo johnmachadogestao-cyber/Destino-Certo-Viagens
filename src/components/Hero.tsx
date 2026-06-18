@@ -43,7 +43,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-screen md:h-full pt-32 xs:pt-36 sm:pt-32 md:pt-20 pb-12 sm:pb-16">
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center text-white flex flex-col items-center justify-center min-h-screen md:h-full pt-20 xs:pt-24 sm:pt-20 md:pt-14 pb-12 sm:pb-16">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-base sm:text-xl md:text-2xl lg:text-3xl max-w-md sm:max-w-2xl md:max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12 text-gray-200 leading-relaxed"
+          className="text-base sm:text-xl md:text-2xl lg:text-3xl max-w-md sm:max-w-2xl md:max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20 text-gray-200 leading-relaxed"
         >
           Entre para a comunidade que descobre promoções, cruzeiros e oportunidades de viagem antes da maioria.
         </motion.p>
