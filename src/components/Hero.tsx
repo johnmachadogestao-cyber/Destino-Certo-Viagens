@@ -28,16 +28,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center gap-3 md:gap-3.5"
+          className="flex items-center gap-4 sm:gap-5"
         >
-          <div className="bg-white/95 p-1.5 rounded-xl shadow-md border border-white/20 transition-transform hover:scale-105 duration-300">
+          <div className="bg-white/95 p-2 sm:p-2.5 rounded-2xl shadow-xl border border-white/30 transition-transform hover:scale-105 duration-300">
             <img 
               src="https://i.postimg.cc/tCG5ZPRp/Captura-de-tela-2026-06-18-013401.png" 
               alt="Destino Certo Logo" 
-              className="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-lg"
+              className="h-16 w-auto sm:h-20 md:h-24 object-contain rounded-xl"
             />
           </div>
-          <span className="text-white text-xl sm:text-2xl font-serif font-bold tracking-wide drop-shadow-md">
+          <span className="text-white text-2xl sm:text-3xl md:text-4xl font-serif font-bold tracking-wide drop-shadow-lg">
             Destino Certo
           </span>
         </motion.div>
