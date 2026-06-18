@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-base sm:text-xl md:text-2xl lg:text-3xl max-w-md sm:max-w-2xl md:max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20 text-gray-200 leading-relaxed"
+          className="text-base sm:text-xl md:text-2xl lg:text-3xl max-w-md sm:max-w-2xl md:max-w-4xl mx-auto mb-16 sm:mb-24 md:mb-28 text-gray-200 leading-relaxed"
         >
           Entre para a comunidade que descobre promoções, cruzeiros e oportunidades de viagem antes da maioria.
         </motion.p>
