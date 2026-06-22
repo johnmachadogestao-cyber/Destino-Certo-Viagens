@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function About() {
   return (
-    <section className="py-12 md:py-16 bg-blue-50">
+    <section className="py-12 md:py-16 bg-blue-100">
       <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
         <motion.img 
           initial={{ opacity: 0, x: -50 }}

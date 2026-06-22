@@ -69,7 +69,7 @@ export default function Offers() {
   };
 
   return (
-    <section className="py-10 bg-gray-50 overflow-hidden">
+    <section className="py-10 bg-blue-100 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-8 leading-tight">
           <span className="block sm:inline whitespace-nowrap">Algumas das viagens</span> que já divulgamos no grupo

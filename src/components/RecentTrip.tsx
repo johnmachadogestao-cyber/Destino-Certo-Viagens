@@ -96,7 +96,7 @@ export default function RecentTrip() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-white overflow-hidden border-t border-gray-100">
+    <section className="py-12 md:py-16 bg-blue-100 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Same styling and layout as "Algumas das viagens" */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-2 leading-tight">
